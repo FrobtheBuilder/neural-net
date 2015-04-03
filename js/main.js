@@ -2,25 +2,23 @@ var p = new Architect.Perceptron(2, 90, 1)
 
 var rate = 0.3
 for (var i = 0; i < 20000; i++) {
-	p.activate([0, 0]);
+	p.activate([0, 0])
 	p.propagate(rate, [0])
 
-	p.activate([0, 1]);
+	p.activate([0, 1])
 	p.propagate(rate, [1])
 
-	p.activate([1, 0]);
+	p.activate([1, 0])
 	p.propagate(rate, [1])
 
-	p.activate([1, 1]);
+	p.activate([1, 1])
 	p.propagate(rate, [0])
 }
-
-var pJson = p.toJSON();
 
 document.querySelector("#container2").innerHTML = JSON.stringify(p.toJSON())
 
 var s = new sigma(container)
-
+s.settings({maxEdgeSize: 5})
 function netToGraph(JSONnetwork, sigma) {
 	var s = sigma
 	var pJson = JSONnetwork
@@ -80,10 +78,10 @@ function netToGraph(JSONnetwork, sigma) {
 	})
 }
 
-netToGraph(pJson, s)
+netToGraph(p.toJSON(), s)
 
 s.refresh()
 s.startForceAtlas2({
 	edgeWeightInfluence: 0.5,
 	outboundAttractionDistribution: true
-});
+})
