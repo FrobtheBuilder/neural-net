@@ -11,18 +11,43 @@ and open the template in the editor.
 body {
 	font-family: sans-serif;
 	word-wrap: break-word;
+	margin: 0;
+	margin-top: 10px;
 }
 
 #container {
-	width: 500px;
+	width: 55%;
 	height: 600px;
 	margin: 0;
 	float: left;
 }
 
 #neural-console {
-	width: 500px;
+	width: 40%;
 	height: 600px;
 	float: right;
 	overflow: scroll;
+	font-family: consolas, monospace;
+	font-size: 22px;
+}
+
+.bar {
+	height: 20px;
+	margin: 10px;
+	padding: 5px;
+	float: right;
+}
+.switch {
+	background-color: white;
+	font-family: monospace;
+	display: inline;
+	margin: 5 5 5 0;
+	padding: 3px;
+	cursor: pointer;
+	border: solid grey 1px;
+}
+
+.switch:hover {
+	color: white;
+	background-color: black;
 }

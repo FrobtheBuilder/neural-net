@@ -4,13 +4,33 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		
+		
 		<div class="main">
 			<div id="container"></div>
 			<div id="neural-console"></div>
+			<div style="clear:both"></div>
+			<div class="bar">
+				<div class="switch" id="xor">XOR</div>
+				<div class="switch" id="xor-small">XOR-SMALL</div>
+				<div class="switch" id="xor-dual">XOR-DUAL</div>
+				<div class="switch" id="and">AND</div>
+				<div class="switch" id="and-small">AND-SMALL</div>
+				<div class="switch" id="sin">SIN-SINGLE</div>
+				<div class="switch" id="sin-dual">SIN-DUAL</div>
+				<div class="switch dark" id="dump">[DUMP JSON]</div>
+			</div>
+			<div style="clear:both"></div>
+			<canvas id="plot" width="900" height="400"></canvas>
+			<div id="toilet"></div>
 		</div>
 		<script src="js/b/jquery/dist/jquery.js"></script>
+		<script src="js/jquery.csv.js"></script>
+		<script src="js/b/lodash/lodash.js"></script>
 		<script src="js/synaptic.js"></script>
-		<script src="js/sigma.min.js"></script>
+		<script src="js/sigma-head/build/sigma.min.js"></script>
+		<script src="js/sigma-head/build/plugins/sigma.renderers.edgeLabels.min.js"></script>
+		<script src="js/chart.js"></script>
 		<script src="js/plugins/sigma.parsers.json.min.js"></script>
 		<script src="js/plugins/sigma.layout.forceAtlas2.min.js"></script>
 		<script src="js/builder.js"></script>
